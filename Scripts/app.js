@@ -15,7 +15,8 @@
         AuthGuard();
         router.LinkData = data;
         history.pushState({}, "", router.ActiveLink);
-        document.title = router.ActiveLink.substring(0, 1).toUpperCase() + router.ActiveLink.substring(1);
+        document.title = router.ActiveLink.substring(0, 1).toUpperCase() +
+            router.ActiveLink.substring(1);
         $("ul>li>a").each(function () {
             $(this).removeClass("active");
         });
@@ -63,6 +64,7 @@
         let callback = ActiveLinkCallBack();
         $.get(`./Views/content/${page_name}.html`, function (html_data) {
             $("main").html(html_data);
+            CheckLogin();
             callback();
         });
     }
@@ -281,7 +283,7 @@
             case "404": return Display404Page;
             default:
                 console.error("ERROR: callback does not exist: " + router.ActiveLink);
-                return new Function();
+                return new Function;
         }
     }
     function Start() {

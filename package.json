@@ -1,7 +1,7 @@
 {
-  "name": "mysite",
+  "name": "exercise8",
   "version": "1.0.0",
-  "description": "Repo for mysite",
+  "description": "Repo for JavaScript-Practice exercise 8",
   "main": "index.js",
   "author": "Russell Waring",
   "license": "MIT",

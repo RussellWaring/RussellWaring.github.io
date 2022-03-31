@@ -1,5 +1,7 @@
 // IIFE -- Immediately Invoked Function Expression
 // AKA -- Anonymous Self-Executing Function
+
+"use strict";
 (function()
 {
     // Utility Functions
@@ -37,7 +39,8 @@
         history.pushState({}, "", router.ActiveLink);
 
         // Capitalize the router activeLink and set the title to it
-        document.title = router.ActiveLink.substring(0, 1).toUpperCase() + router.ActiveLink.substring(1);
+        document.title = router.ActiveLink.substring(0, 1).toUpperCase() + 
+        router.ActiveLink.substring(1);
 
         // Remove all active links
         $("ul>li>a").each(function()
@@ -71,7 +74,7 @@
         navLinks.on("mouseover", function()
         {
             $(this).css("cursor", "pointer");
-        });
+        })
     }
 
     function AddLinkEvents(link: string): void
@@ -135,7 +138,7 @@
         {
             $("main").html(html_data);
 
-            //CheckLogin();
+            CheckLogin();
             
             callback();
         });
@@ -526,7 +529,7 @@
             case "404": return Display404Page;
             default:
                 console.error("ERROR: callback does not exist: " + router.ActiveLink);
-                return new Function();
+                return new Function;
         }
     }
 
