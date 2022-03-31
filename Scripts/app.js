@@ -223,6 +223,7 @@
             $("#logout").on("click", function () {
                 sessionStorage.clear();
                 $("#login").html(`<a class="nav-link" data="login"><i class="fa-solid fa-sign-in-alt"></i> Login</a>`);
+                AddNavigationEvents();
                 LoadLink("login");
             });
         }

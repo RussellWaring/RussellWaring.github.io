@@ -424,6 +424,8 @@
                     `<a class="nav-link" data="login"><i class="fa-solid fa-sign-in-alt"></i> Login</a>`
                 );
 
+                AddNavigationEvents();
+
                 // redirect back to login page
                 LoadLink("login");
             })
