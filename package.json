@@ -2,7 +2,7 @@
   "name": "mysite",
   "version": "1.0.0",
   "description": "Repo for mysite",
-  "main": "index.html",
+  "main": "index.js",
   "author": "Russell Waring",
   "license": "MIT",
   "dependencies": {
