@@ -144,6 +144,7 @@ router.AddTable([
 ]); 
 
 let route: string = location.pathname; // alias for location.pathname
+console.log(location.pathname);
 
 // If route is found in the Routing Table
 router.ActiveLink = (router.Find(route) > -1) ? (route == "/") ? "home" : route.substring(1) : "404";
