@@ -159,7 +159,7 @@
         console.log("Home Page");
         $("#AboutUsButton").on("click", () =>
         {
-            location.href = "/about";
+            LoadLink("about");
         });
 
         $("main").append(`<p id="MainParagraph" class="mt-3">This is the Main Paragraph</p>`);
