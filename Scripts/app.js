@@ -254,7 +254,7 @@
       if(sessionStorage.getItem("user"))
       {
         // swap out the login link for logout
-        $("#loginListItem").html(
+        $("#login").html(
         `<a id="logout" class="nav-link" aria-current="page"><i class="fas fa-sign-out-alt"></i> Logout</a>`
         );
 
@@ -282,18 +282,18 @@
      
         $(`<li class="nav-item">
         <a id="contact-list" class="nav-link" aria-current="page"><i class="fas fa-users fa-lg"></i> Contact List</a>
-          </li>`).insertBefore("#loginListItem");
+        </li>`).insertBefore("#login");
 
         $(`<li class="nav-item">
         <a id="task-list" class="nav-link" aria-current="page"><i class="fas fa-list"></i> Task List</a>
-        </li>`).insertBefore("#loginListItem");
+        </li>`).insertBefore("#login");
 
       }
       else
       {
         // swap out the login link for logout
-        $("#loginListItem").html(
-          `<a id="login" class="nav-link" aria-current="page"><i class="fas fa-sign-in-alt"></i> Login</a>`
+        $("#login").html(
+          `<a data="login" class="nav-link" aria-current="page"><i class="fas fa-sign-in-alt"></i> Login</a>`
           );
       }
     }
