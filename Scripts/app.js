@@ -264,8 +264,8 @@
         {
           // perform logout
           sessionStorage.clear();
-          $("li").remove("#contact-list");
-          $("li").remove("#task-list");
+          //$("li").remove("#contact-list");
+          //$("li").remove("#task-list");
 
           // redirect back to login
           LoadLink("login");
@@ -282,13 +282,13 @@
           $(this).css('cursor', 'pointer');
         });
      
-            $(`<li class="nav-item">
-            <a id="contact-list" class="nav-link" aria-current="page"><i class="fas fa-users fa-lg"></i> Contact List</a>
+        $(`<li class="nav-item">
+        <a id="contact-list" class="nav-link" aria-current="page"><i class="fas fa-users fa-lg"></i> Contact List</a>
           </li>`).insertBefore("#loginListItem");
 
-            $(`<li class="nav-item">
-            <a id="task-list" class="nav-link" aria-current="page"><i class="fas fa-list"></i> Task List</a>
-          </li>`).insertBefore("#loginListItem");
+        $(`<li class="nav-item">
+        <a id="task-list" class="nav-link" aria-current="page"><i class="fas fa-list"></i> Task List</a>
+        </li>`).insertBefore("#loginListItem");
 
       }
       else
