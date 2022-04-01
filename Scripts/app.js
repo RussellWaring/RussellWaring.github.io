@@ -255,19 +255,13 @@
             ToggleTabs();
             //AddNavigationEvents();
             
-            if($("#logout").length)
-            {
+
                 $("#logout").on("click", function () {
                     sessionStorage.clear();
                     $("#login").html(`<a class="nav-link" data="login"><i class="fas-solid fa-sign-in-alt"></i> Login</a>`);
                     AddNavigationEvents();
                     LoadLink("login");
                 });
-            }
-            else
-            {
-                AddNavigationEvents();
-            }
 
             
         }
