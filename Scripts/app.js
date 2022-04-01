@@ -57,8 +57,9 @@
         $.get(`./Views/components/header.html`, function (html_data) {
             $("header").html(html_data);
             //ToggleLoginTabs();
-            AddNavigationEvents();
+            
             toggleLogin(); // add login / logout and secure links
+            AddNavigationEvents();
         });
     }
 
