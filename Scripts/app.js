@@ -57,8 +57,10 @@
         $.get(`./Views/components/header.html`, function (html_data) {
             $("header").html(html_data);
             //ToggleLoginTabs();
+
+            toggleLogin(); // add login / logout and secure links
+
             AddNavigationEvents();
-            CheckLogin();
         });
     }
 
@@ -95,7 +97,6 @@
         let callback = ActiveLinkCallBack();
         $.get(`./Views/content/${page_name}.html`, function (html_data) {
             $("main").html(html_data);
-            CheckLogin();
             callback();
         });
     }
@@ -248,24 +249,53 @@
                 break;
         }
     }
-    function CheckLogin() {
-        if (sessionStorage.getItem("user")) {
-            $("#login").html(`<a id="logout" class="nav-link" href="#"><i class="fas-solid fa-sign-out-alt"></i> Logout</a>`);
 
-            ToggleTabs();
-            //AddNavigationEvents();
-            
+    function toggleLogin()
+    {
+      // if user is logged in
+      if(sessionStorage.getItem("user"))
+      {
+        // swap out the login link for logout
+        $("#loginListItem").html(
+        `<a id="logout" class="nav-link" aria-current="page"><i class="fas fa-sign-out-alt"></i> Logout</a>`
+        );
 
-                $("#logout").on("click", function () {
-                    sessionStorage.clear();
-                    $("#login").html(`<a class="nav-link" data="login"><i class="fas-solid fa-sign-in-alt"></i> Login</a>`);
-                    AddNavigationEvents();
-                    LoadLink("login");
-                });
+        $("#logout").on("click", function()
+        {
+          // perform logout
+          sessionStorage.clear();
 
-            
-        }
-        //AddNavigationEvents();
+          // redirect back to login
+          LoadLink("login");
+        });
+
+        // make it look like each nav item is an active link
+        $("#logout").on("mouseover", function()
+        {
+          $(this).css('cursor', 'pointer');
+        });
+
+        $("#tasklist").on("mouseover", function()
+        {
+          $(this).css('cursor', 'pointer');
+        });
+     
+            $(`<li class="nav-item">
+            <a id="contact-list" class="nav-link" aria-current="page"><i class="fas fa-users fa-lg"></i> Contact List</a>
+          </li>`).insertBefore("#loginListItem");
+
+            $(`<li class="nav-item">
+            <a id="tasklist" class="nav-link" aria-current="page"><i class="fas fa-list"></i> Task List</a>
+          </li>`).insertBefore("#loginListItem");
+
+      }
+      else
+      {
+        // swap out the login link for logout
+        $("#loginListItem").html(
+          `<a id="login" class="nav-link" aria-current="page"><i class="fas fa-sign-in-alt"></i> Login</a>`
+          );
+      }
     }
 
     function DisplayLoginPage() {
