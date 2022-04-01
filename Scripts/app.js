@@ -264,6 +264,8 @@
         {
           // perform logout
           sessionStorage.clear();
+          $("li").remove("#contact-list");
+          $("li").remove("#task-list");
 
           // redirect back to login
           LoadLink("login");
@@ -285,7 +287,7 @@
           </li>`).insertBefore("#loginListItem");
 
             $(`<li class="nav-item">
-            <a id="tasklist" class="nav-link" aria-current="page"><i class="fas fa-list"></i> Task List</a>
+            <a id="task-list" class="nav-link" aria-current="page"><i class="fas fa-list"></i> Task List</a>
           </li>`).insertBefore("#loginListItem");
 
       }
