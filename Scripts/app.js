@@ -83,6 +83,11 @@
             }     
             
         }
+        else
+        {
+            $("li").remove("#contact-list");
+            $("li").remove("#task-list");
+        }
     }
 
     function LoadContent() {
