@@ -2,22 +2,29 @@
     "contacts":
     [
         {
-            "DisplayName": "John Smith",
-            "EmailAddress": "john.smith@example.com",
-            "Username": "johnsmith",
-            "Password": "123456"
+            "FullName":"Tony Stark",
+            "ContactNumber":"4165555556",
+            "EmailAddress":"ironman@example.com"
         },
         {
-            "DisplayName": "May Smith",
-            "EmailAddress": "may.smith@example.com",
-            "Username": "maysmith",
-            "Password": "123456"
+            "FullName":"Bruce Banner",
+            "ContactNumber":"4165555557",
+            "EmailAddress":"thehulk@example.com"
         },
         {
-            "DisplayName": "Admin",
-            "EmailAddress": "admin@example.com",
-            "Username": "admin",
-            "Password": "123456"
+            "FullName":"Peter Parker",
+            "ContactNumber":"4165555558",
+            "EmailAddress":"spiderman@example.com"
+        },
+        {
+            "FullName":"Stephen Strange",
+            "ContactNumber":"4165555559",
+            "EmailAddress":"doctorstrange@example.com"
+        },
+        {
+            "FullName":"Reed Richards",
+            "ContactNumber":"4165555550",
+            "EmailAddress":"mrfantastic@example.com"
         }
     ]
 }
