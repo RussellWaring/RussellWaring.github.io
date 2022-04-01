@@ -294,7 +294,7 @@
       {
         // swap out the login link for logout
         $("#loginListItem").html(
-          `<a id="login" class="nav-link" aria-current="page"><i class="fas fa-sign-in-alt"></i> Login</a>`
+          `<a data="login" class="nav-link" aria-current="page"><i class="fas fa-sign-in-alt"></i> Login</a>`
           );
       }
     }
