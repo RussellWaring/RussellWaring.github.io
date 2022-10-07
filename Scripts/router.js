@@ -49,8 +49,6 @@ router.AddTable([
     "/",
     "/home",
     "/about",
-    "/contact",
-    "/contact-list",
     "/labs",
 ]);
 let route = location.pathname;
