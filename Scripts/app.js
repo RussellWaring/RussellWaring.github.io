@@ -1,19 +1,8 @@
 "use strict";
 (function () {
-    function AuthGuard() {
-        let protected_routes = [
-            "contact-list",
-            "task-list"
-        ];
-        if (protected_routes.indexOf(router.ActiveLink) > -1) {
-            if (!sessionStorage.getItem("user")) {
-                router.ActiveLink = "login";
-            }
-        }
-    }
+    
     function LoadLink(link, data = "") {
         router.ActiveLink = link;
-        AuthGuard();
         router.LinkData = data;
         history.pushState({}, "", router.ActiveLink);
         document.title = router.ActiveLink.substring(0, 1).toUpperCase() +
@@ -109,11 +98,6 @@
         $("#AboutUsButton").on("click", () => {
             LoadLink("about");
         });
-        $("main").append(`<p id="MainParagraph" class="mt-3">This is the Main Paragraph</p>`);
-        $("main").append(`
-        <article">
-            <p id="ArticleParagraph" class="mt-3">This is the Article Paragraph</p>
-            </article>`);
     }
     function DisplayAboutPage() {
         console.log("About Page");

@@ -201,3 +201,22 @@ button:hover{
  #copyYear{
     font-size: 1rem;
 }
+
+#tableAppDevTool {
+    width: 66%;
+    border:1px;
+    border-style:solid;
+    border-color:#CD5C5C;
+    padding:0;
+    height:60px;
+    color:black;
+    vertical-align:center;
+}
+
+#test {
+    width:100%;
+    height:100%;
+  }
+  table {
+    margin: 0 auto; /* or margin: 0 auto 0 auto */
+  }
